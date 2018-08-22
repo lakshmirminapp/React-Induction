@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {SampleApp} from './playground/es6-let-const.js'
+import {SampleApp} from './playground/es6-let-const.js';
+import {ES6ArrowApp} from './playground/es6-arrow-function.js';
 
 export default class App extends Component {
   render() {
@@ -26,6 +27,7 @@ export default class App extends Component {
         </ol>
         <App2 test="super-test" />
         <SampleApp />
+        <ES6ArrowApp />
       </div>
     );
   }

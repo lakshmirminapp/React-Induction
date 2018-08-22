@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 
 export class SampleApp extends Component {
-
     render() {
         var namevar = "rml";
         var namevar = "***"; //using var - more initalization
@@ -28,7 +27,7 @@ export class SampleApp extends Component {
         console.log(firstname, "--firstname--");
         return (
             <div>
-                <h1>let concept New page</h1>
+                <h1>let concept page - 2</h1>
             </div>
         )
     }
