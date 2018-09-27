@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { SampleApp } from './playground/es6-let-const.js';
-import { ES6ArrowApp } from './playground/es6-arrow-function.js';
-import { ES6ArrowApp2 } from './playground/es6-arrow-function2.js';
+// import { SampleApp } from './playground/es6-let-const.js';
+// import { ES6ArrowApp } from './playground/es6-arrow-function.js';
+// import { ES6ArrowApp2 } from './playground/es6-arrow-function2.js';
+import { Counter } from './playground/counter.js';
 
 export default class App extends Component {
   render() {
@@ -19,19 +20,20 @@ export default class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">{app.title}</h1>
         </header>
-        {app.subtitle && <p className="App-intro">{app.subtitle}</p>}
+        {/* {app.subtitle && <p className="App-intro">{app.subtitle}</p>} */}
         {/* <div>{app.info}</div> */}
-        <div>{(app.options && app.options.length > 0) ? "more are your options" : "No Options"}</div>
+        {/* <div>{(app.options && app.options.length > 0) ? "more are your options" : "No Options"}</div>
         <ol>
           <li>list onee</li>
           <li>list two</li>
-        </ol>
+        </ol> */}
         {/* template redering in single page */}
-        <App2 test="super-test" />
+        {/* <App2 test="super-test" />
         <App3 />
-        {/* <SampleApp />
-        <ES6ArrowApp /> */}
-        {/* <ES6ArrowApp2 /> */}
+        <SampleApp />
+        <ES6ArrowApp />
+        <ES6ArrowApp2 /> */}
+        <Counter />
       </div>
     );
   }
@@ -83,7 +85,7 @@ export class App3 extends Component {
     }
     console.log(this.state.count, "---");
   }
-  render() {  
+  render() {
     let count = 0;
     const myid = "myid"
     const addOne = () => {
@@ -99,12 +101,12 @@ export class App3 extends Component {
       console.log("reset", count);
     }
     return (
-        <div>
-          <h1>Count: {count}</h1>
-          <button id={myid} className="button" onClick={addOne}>+1</button>
-          <button onClick={minusOne}>-1</button>
-          <button onClick={reset}>Reset</button>
-        </div>
+      <div>
+        <h1>Count: {count}</h1>
+        <button id={myid} className="button" onClick={addOne}>+1</button>
+        <button onClick={minusOne}>-1</button>
+        <button onClick={reset}>Reset</button>
+      </div>
 
     );
   }
